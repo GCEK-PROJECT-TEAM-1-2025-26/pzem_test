@@ -40,10 +40,11 @@ void loop() {
   float pf = pzem.pf();
   
   // Check if reading was successful
-  if (isnan(voltage)) {
-    Serial.println("Error reading from PZEM-004T sensor!");
-    Serial.println("Check wiring and connections.");
-  } else {
+  if(isnan(voltage)){
+    Serial.println("Error in reading sensor Data");
+
+  }
+  else{
     // Display all readings
     Serial.println("\n--- Power Readings ---");
     Serial.print("Voltage:      "); Serial.print(voltage, 1); Serial.println(" V");
@@ -53,8 +54,17 @@ void loop() {
     Serial.print("Frequency:    "); Serial.print(frequency, 1); Serial.println(" Hz");
     Serial.print("Power Factor: "); Serial.println(pf, 2);
     Serial.println("---------------------");
-  }
   
   // Wait 2 seconds before next reading
   delay(2000);
 }
+}
+
+
+
+
+
+
+
+// Author : Harikesh OP
+// S6 ECE GCEK
