@@ -57,6 +57,7 @@ void loop() {
   
   // Wait 2 seconds before next reading
   delay(2000);
+  // pzem.resetEnergy(); // Function can be used to recaluclate the totla energy used
 }
 }
 
